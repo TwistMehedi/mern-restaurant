@@ -1,19 +1,23 @@
- import './App.css'
+ import { Route, Routes } from 'react-router'
+import './App.css'
+import Register from './pages/Register'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 
 function App() {
  
 
   return (
     <div>
-      <button className="btn btn-neutral">Neutral</button>
-<button className="btn btn-primary">Primary</button>
-<button className="btn btn-secondary">Secondary</button>
-<button className="btn btn-accent">Accent</button>
-<button className="btn btn-info">Info</button>
-<button className="btn btn-success">Success</button>
-<button className="btn btn-warning">Warning</button>
-<button className="btn btn-error">Error</button>
-mehedi
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
+        <Route path='/reset-password' element={<ResetPassword/>}></Route>
+      </Routes>
     </div>
   )
 }
