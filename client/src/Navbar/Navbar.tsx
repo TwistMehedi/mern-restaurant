@@ -1,11 +1,10 @@
-import React from "react";
 import { Link } from "react-router";
 
 export default function Navbar(){
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to={"/"} className="btn btn-ghost text-xl">Restaurant</Link>
       </div>
 
       {/* Mobile Menu Button */}
@@ -31,7 +30,13 @@ export default function Navbar(){
           className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li>
-            <a>Profile</a>
+            <Link to={"/profile"}>Profile</Link>
+          </li>
+          <li>
+            <Link to={"/order"}>Order</Link>
+          </li>
+          <li>
+            <Link to={"/menu"}>Menu</Link>
           </li>
           <li>
             <a>Settings</a>
@@ -79,7 +84,9 @@ export default function Navbar(){
               <span className="text-lg font-bold">8 Items</span>
               <span className="text-info">Subtotal: $999</span>
               <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
+                 <Link to={"/cart"}>
+                 <button className="btn btn-primary btn-block">View cart</button>
+                 </Link>
               </div>
             </div>
           </div>
@@ -104,10 +111,16 @@ export default function Navbar(){
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a className="justify-between">
+              <Link to={"/profile"} className="justify-between">
                 Profile <span className="badge">New</span>
-              </a>
+              </Link>
             </li>
+            <li>
+            <Link to={"/order"}>Order</Link>
+          </li>
+          <li>
+            <Link to={"/menu"}>Menu</Link>
+          </li>
             <li>
               <a>Settings</a>
             </li>
