@@ -39,6 +39,9 @@ export default function Navbar(){
             <Link to={"/menu"}>Menu</Link>
           </li>
           <li>
+          <Link to={"/add-restaurant"}>Restaurant</Link>
+          </li>
+          <li>
             <a>Settings</a>
           </li>
           <li>
@@ -49,6 +52,7 @@ export default function Navbar(){
 
        <div className="flex gap-4">
        <Link to={"/"}>Home</Link>
+       <Link to={"/add-restaurant"}>Restaurant</Link>
        <Link to={"/register"}>Register</Link>
        <Link to={"/login"}>Login</Link>
        </div>
@@ -120,6 +124,9 @@ export default function Navbar(){
           </li>
           <li>
             <Link to={"/menu"}>Menu</Link>
+          </li>
+          <li>
+          <Link to={"/add-restaurant"}>Restaurant</Link>
           </li>
             <li>
               <a>Settings</a>

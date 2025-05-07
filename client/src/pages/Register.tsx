@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
+import { userStore } from "../store/userSlice";
 
 export default function Register() {
   const {
@@ -12,8 +13,11 @@ export default function Register() {
     mode: "onChange", // Important for real-time validation
   });
 
-  const onSubmit = (data: any) => {
+  const {signup} = userStore((state)=> state);
+
+  const onSubmit =async(data: any) => {
     console.log("Form Data:", data);
+    await signup(data)
   };
 
   const password = watch("password");

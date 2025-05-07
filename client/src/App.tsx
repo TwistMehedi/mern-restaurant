@@ -11,6 +11,7 @@ import Profile from './pages/Profile'
 import SearchPage from './pages/SearchPage'
 import FoodDetails from './components/FoodDetails'
 import Cart from './pages/Cart'
+import Restaurant from './pages/admin/Restaurant'
 
 function App() {
  
@@ -29,6 +30,8 @@ function App() {
         <Route path='/search/:text' element={<SearchPage/>}></Route>
         <Route path='/food/:id' element={<FoodDetails/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
+        //admin
+        <Route path='/add-restaurant' element={<Restaurant/>}></Route>
       </Routes>
     </div>
   )
